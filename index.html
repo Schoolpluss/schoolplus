@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>École+ — Maquette</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & base */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{font-family:"Open Sans",system-ui,Arial;line-height:1.4;color:#1b1b1b;background:#fbfaf8;padding:24px;display:flex;justify-content:center}
+    .wrap{width:100%;max-width:920px;background:#fff;border-radius:14px;padding:28px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 6px 24px rgba(20,20,30,0.04)}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{font-family:Poppins, sans-serif;font-weight:700;font-size:26px;color:#0b0b0b}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{font-weight:600;color:#222;text-decoration:none}
+    .search{width:36px;height:36px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);display:inline-flex;align-items:center;justify-content:center}
+
+    /* Hero */
+    .hero{display:flex;gap:20px;align-items:center;background:#efefef;padding:28px;border-radius:10px;margin-bottom:22px}
+    .hero .art{flex:0 0 160px;display:flex;align-items:center;justify-content:center}
+    .hero .art svg{opacity:0.6;width:110px;height:110px}
+    .hero .content{flex:1}
+    .hero h1{font-family:Poppins, sans-serif;font-size:32px;line-height:1.05;margin-bottom:14px}
+    .btn{display:inline-block;padding:12px 20px;border-radius:999px;background:#4b4b4b;color:#fff;font-weight:600;text-decoration:none}
+
+    /* Level blocks */
+    .levels{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:22px}
+    .card{padding:24px;border-radius:10px;min-height:140px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;box-shadow:0 6px 18px rgba(12,15,20,0.03);border:1px solid rgba(0,0,0,0.04)}
+    .card .icon{font-size:48px;margin-bottom:8px;opacity:0.95}
+    .card h3{font-family:Poppins, sans-serif;margin-top:auto}
+    .card.prim{background:#fff3cc;border-color:#ffeaa1}
+    .card.col{background:#eaf2ff;border-color:#d6e7ff}
+    .card.lyc{background:#e9f5ea;border-color:#d7ecd9}
+
+    /* Footer container */
+    .info{display:flex;gap:18px;align-items:flex-start;padding:20px;border-radius:10px;background:#f6f3f0;border:1px solid rgba(0,0,0,0.03)}
+    .info > div{flex:1}
+    .links a{display:block;color:#333;text-decoration:none;margin-bottom:6px}
+
+    /* Example subject page preview */
+    .subject{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-top:18px}
+    .subject .chapters{display:flex;flex-wrap:wrap;gap:12px}
+    .chapter{background:#fff;padding:14px;border-radius:8px;min-width:180px;border:1px solid rgba(0,0,0,0.04);box-shadow:0 6px 18px rgba(12,15,20,0.02)}
+    .sidebar{background:#fff;padding:14px;border-radius:8px;border:1px solid rgba(0,0,0,0.04)}
+
+    /* Responsive */
+    @media (max-width:760px){
+      .hero{flex-direction:column;align-items:flex-start}
+      .levels{grid-template-columns:1fr}
+      .subject{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">École+</div>
+      </div>
+      <nav>
+        <a href="#">Accueil</a>
+        <a href="#">Primaire</a>
+        <a href="#">Collège</a>
+        <a href="#">Lycée</a>
+        <div class="search" title="Recherche">🔍</div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="art" aria-hidden="true">
+        <!-- Simple notebook illustration (SVG) -->
+        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="6" width="44" height="52" rx="4" stroke="#111" stroke-width="2" fill="none"/><path d="M16 12v40" stroke="#111" stroke-width="1.6" stroke-linecap="round"/><rect x="20" y="18" width="20" height="8" rx="1" stroke="#111" stroke-width="1.6"/></svg>
+      </div>
+      <div class="content">
+        <h1>Toutes les matières, toutes les classes, au même endroit.</h1>
+        <p style="margin-bottom:12px;color:#333;opacity:0.85">Accède aux chapitres, cours, exercices et ressources organisés par niveau.</p>
+        <a class="btn" href="#levels">Commencer</a>
+      </div>
+    </section>
+
+    <section id="levels" class="levels">
+      <article class="card prim" role="button" tabindex="0">
+        <div class="icon">📘</div>
+        <h3>Primaire</h3>
+      </article>
+      <article class="card col" role="button" tabindex="0">
+        <div class="icon">📏</div>
+        <h3>Collège</h3>
+      </article>
+      <article class="card lyc" role="button" tabindex="0">
+        <div class="icon">🧮</div>
+        <h3>Lycée</h3>
+      </article>
+    </section>
+
+    <section class="info">
+      <div>
+        <strong>Contact</strong>
+        <div style="margin-top:10px">✉️ info@ecoleplus.exemple</div>
+        <div style="margin-top:6px">🐦 @ecoleplus</div>
+      </div>
+      <div class="links">
+        <strong>Liens rapides</strong>
+        <a href="#">Accueil</a>
+        <a href="#">Mentions légales</a>
+        <a href="#">Aide</a>
+      </div>
+    </section>
+
+    <!-- Exemple de page matière (aperçu) -->
+    <section class="subject" aria-labelledby="subj-title">
+      <div>
+        <h2 id="subj-title" style="font-family:Poppins, sans-serif;margin:14px 0">Mathématiques — 3e</h2>
+        <div class="chapters">
+          <div class="chapter">Nombres et calculs</div>
+          <div class="chapter">Fractions & proportions</div>
+          <div class="chapter">Géométrie</div>
+          <div class="chapter">Algèbre</div>
+          <div class="chapter">Fonctions (introduction)</div>
+        </div>
+      </div>
+      <aside class="sidebar">
+        <strong>Autres matières (3e)</strong>
+        <ul style="margin-top:10px;list-style:none;padding-left:0">
+          <li style="margin-bottom:8px">Français</li>
+          <li style="margin-bottom:8px">Histoire</li>
+          <li style="margin-bottom:8px">SVT</li>
+        </ul>
+      </aside>
+    </section>
+
+    <footer style="margin-top:22px;text-align:left;color:#666;font-size:13px">© 2025 École+</footer>
+  </div>
+
+  <script>
+    // Petit code d'interaction: focus keyboard sur cartes et navigation
+    document.querySelectorAll('.card[role="button"]').forEach(c=>{
+      c.addEventListener('click',()=>{window.alert('Ouvrir la page correspondant au niveau (ex: '+c.textContent.trim()+')');});
+      c.addEventListener('keydown',e=>{if(e.key=== 'Enter' || e.key===' ') c.click();});
+    });
+  </script>
+</body>
+</html>
