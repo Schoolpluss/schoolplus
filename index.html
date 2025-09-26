@@ -4,56 +4,48 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>École+ — Maquette</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { height: 100%; }
-    body { font-family: "Open Sans", Arial, sans-serif; line-height: 1.4; color: #1b1b1b; background: #fbfaf8; padding: 24px; display: flex; justify-content: center; }
-    .wrap { width: 100%; max-width: 920px; background: #fff; border-radius: 14px; padding: 28px; border: 1px solid rgba(0,0,0,0.06); box-shadow: 0 6px 24px rgba(20,20,30,0.04); }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{font-family:"Open Sans",Arial, sans-serif;line-height:1.4;color:#1b1b1b;background:#fbfaf8;padding:24px;display:flex;justify-content:center}
+    .wrap{width:100%;max-width:920px;background:#fff;border-radius:14px;padding:28px;border:1px solid rgba(0,0,0,0.06);box-shadow:0 6px 24px rgba(20,20,30,0.04)}
 
-    /* Header */
-    header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
-    .brand { display: flex; align-items: center; gap: 14px; }
-    .logo-img { width: 50px; height: 50px; object-fit: contain; }
-    .logo-text { font-family: Poppins, sans-serif; font-weight: 700; font-size: 26px; color: #0b0b0b; }
-    nav { display: flex; gap: 18px; align-items: center; }
-    nav a { font-weight: 600; color: #222; text-decoration: none; }
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo-img{width:50px;height:50px;display:block}
+    .logo-text{font-family:Poppins, sans-serif;font-weight:700;font-size:26px;color:#0b0b0b}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{font-weight:600;color:#222;text-decoration:none}
 
-    /* Hero */
-    .hero { display: flex; gap: 20px; align-items: center; background: #efefef; padding: 28px; border-radius: 10px; margin-bottom: 22px; }
-    .hero .art { flex: 0 0 160px; display: flex; align-items: center; justify-content: center; }
-    .hero .art svg { opacity: 0.6; width: 110px; height: 110px; }
-    .hero .content { flex: 1; }
-    .hero h1 { font-family: Poppins, sans-serif; font-size: 32px; line-height: 1.05; margin-bottom: 14px; }
-    .btn { display: inline-block; padding: 12px 20px; border-radius: 999px; background: #4b4b4b; color: #fff; font-weight: 600; text-decoration: none; }
+    .hero{display:flex;gap:20px;align-items:center;background:#efefef;padding:28px;border-radius:10px;margin-bottom:22px}
+    .hero .art{flex:0 0 160px;display:flex;align-items:center;justify-content:center}
+    .hero .content{flex:1}
+    .hero h1{font-family:Poppins, sans-serif;font-size:32px;line-height:1.05;margin-bottom:14px}
+    .btn{display:inline-block;padding:12px 20px;border-radius:999px;background:#4b4b4b;color:#fff;font-weight:600;text-decoration:none}
 
-    /* Cartes niveaux */
-    .levels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 22px; }
-    .card { padding: 24px; border-radius: 10px; min-height: 140px; display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; box-shadow: 0 6px 18px rgba(12,15,20,0.03); border: 1px solid rgba(0,0,0,0.04); cursor: pointer; }
-    .card .icon { font-size: 48px; margin-bottom: 8px; opacity: 0.95; }
-    .card h3 { font-family: Poppins, sans-serif; margin-top: auto; }
-    .card.prim { background: #fff3cc; border-color: #ffeaa1; }
-    .card.col { background: #eaf2ff; border-color: #d6e7ff; }
-    .card.lyc { background: #e9f5ea; border-color: #d7ecd9; }
+    .levels{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:22px}
+    .card{padding:24px;border-radius:10px;min-height:140px;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;box-shadow:0 6px 18px rgba(12,15,20,0.03);border:1px solid rgba(0,0,0,0.04);cursor:pointer}
+    .card .icon{font-size:48px;margin-bottom:8px;opacity:0.95}
+    .card h3{font-family:Poppins, sans-serif;margin-top:auto}
+    .card.prim{background:#fff3cc;border-color:#ffeaa1}
+    .card.col{background:#eaf2ff;border-color:#d6e7ff}
+    .card.lyc{background:#e9f5ea;border-color:#d7ecd9}
 
-    /* Section info/contact */
-    .info { display: flex; gap: 18px; align-items: flex-start; padding: 20px; border-radius: 10px; background: #f6f3f0; border: 1px solid rgba(0,0,0,0.03); margin-top: 20px; }
-    .info > div { flex: 1; }
-    .links a { display: block; color: #333; text-decoration: none; margin-bottom: 6px; }
+    .info{display:flex;gap:18px;align-items:flex-start;padding:20px;border-radius:10px;background:#f6f3f0;border:1px solid rgba(0,0,0,0.03);margin-top:20px}
+    .info>div{flex:1}
+    .links a{display:block;color:#333;text-decoration:none;margin-bottom:6px}
 
-    /* Matière + sidebar */
-    .subject { display: grid; grid-template-columns: 2fr 1fr; gap: 18px; margin-top: 18px; }
-    .subject .chapters { display: flex; flex-wrap: wrap; gap: 12px; }
-    .chapter { background: #fff; padding: 14px; border-radius: 8px; min-width: 180px; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 6px 18px rgba(12,15,20,0.02); }
-    .sidebar { background: #fff; padding: 14px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.04); }
+    .subject{display:grid;grid-template-columns:2fr 1fr;gap:18px;margin-top:18px}
+    .subject .chapters{display:flex;flex-wrap:wrap;gap:12px}
+    .chapter{background:#fff;padding:14px;border-radius:8px;min-width:180px;border:1px solid rgba(0,0,0,0.04);box-shadow:0 6px 18px rgba(12,15,20,0.02)}
+    .sidebar{background:#fff;padding:14px;border-radius:8px;border:1px solid rgba(0,0,0,0.04)}
 
-    /* Responsive */
-    @media (max-width: 760px) {
-      .hero { flex-direction: column; align-items: flex-start; }
-      .levels { grid-template-columns: 1fr; }
-      .subject { grid-template-columns: 1fr; }
-      header { flex-direction: column; align-items: flex-start; gap: 12px; }
+    @media (max-width:760px){
+      .hero{flex-direction:column;align-items:flex-start}
+      .levels{grid-template-columns:1fr}
+      .subject{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
     }
   </style>
 </head>
@@ -61,10 +53,21 @@
   <div class="wrap">
     <header>
       <div class="brand">
-        <!-- Logo : remplace "logo.png" par ton fichier -->
-        <img class="logo-img" src="logo.png" alt="Logo École+" />
+        <!-- Logo inline SVG (aucun fichier externe nécessaire) -->
+        <svg class="logo-img" width="50" height="50" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo École+">
+          <rect x="0.5" y="0.5" width="47" height="47" rx="10" fill="#4B9CE6" stroke="rgba(0,0,0,0.06)"/>
+          <!-- pages du livre -->
+          <rect x="9" y="13" width="12" height="18" rx="2" fill="#ffffff"/>
+          <rect x="27" y="13" width="12" height="18" rx="2" fill="#ffffff"/>
+          <!-- trait central (dos du livre) -->
+          <rect x="23" y="13" width="2" height="18" rx="0.6" fill="#e6f0fb" />
+          <!-- petit rond orange (dynamisme) -->
+          <circle cx="36" cy="36" r="4" fill="#FF9F1C"/>
+        </svg>
+
         <div class="logo-text">École+</div>
       </div>
+
       <nav>
         <a href="#">Accueil</a>
         <a href="#">Primaire</a>
@@ -99,14 +102,14 @@
       </article>
     </section>
 
-    <!-- Section Contact avec Instagram -->
     <section class="info">
       <div>
         <strong>Contact</strong>
         <div style="margin-top:10px">✉️ info@ecoleplus.exemple</div>
         <div style="margin-top:6px;display:flex;align-items:center;gap:6px;">
           <a href="https://www.instagram.com/schoo_lplus/" target="_blank" style="display:flex;align-items:center;gap:6px;color:#E4405F;text-decoration:none;font-weight:600">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#E4405F" viewBox="0 0 24 24">
+            <!-- icône Instagram officielle en SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#E4405F" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.35 3.608 1.325.975.975 1.262 2.242 1.324 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.35 2.633-1.324 3.608-.975.975-2.242 1.262-3.608 1.324-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.35-3.608-1.324-.975-.975-1.262-2.242-1.324-3.608C2.175 15.747 2.163 15.367 2.163 12s.012-3.584.07-4.85c.062-1.366.35-2.633 1.324-3.608.975-.975 2.242-1.262 3.608-1.324C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.775.13 4.638.428 3.678 1.388 2.718 2.347 2.42 3.484 2.362 4.761 2.304 6.041 2.29 6.45 2.29 12s.014 5.959.072 7.239c.058 1.277.356 2.414 1.316 3.373.96.96 2.097 1.258 3.373 1.316 1.28.058 1.689.072 7.239.072s5.959-.014 7.239-.072c1.277-.058 2.414-.356 3.373-1.316.96-.96 1.258-2.097 1.316-3.373.058-1.28.072-1.689.072-7.239s-.014-5.959-.072-7.239c-.058-1.277-.356-2.414-1.316-3.373-.96-.96-2.097-1.258-3.373-1.316C17.959.014 17.55 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
             </svg>
             Instagram : @schoo_lplus
@@ -123,6 +126,4 @@
 
     <section class="subject" aria-labelledby="subj-title">
       <div>
-        <h2 id="subj-title" style="font-family:Poppins, sans-serif; margin:14px 0">Mathématiques — 3e</h2>
-        <div class="chapters">
-          <div class="chapte
+        <h2 id="subj-title" style="font-family:Poppins, san
